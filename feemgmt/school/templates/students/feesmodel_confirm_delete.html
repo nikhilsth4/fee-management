@@ -1,0 +1,8 @@
+{% extends "demo.html" %}
+{% block body_block %}
+  <h3> Are you sure you want to delete {{ object }}?</h3>
+<form method="post">{% csrf_token %} 
+  <input type="submit" value="confirm" class="btn btn-danger">
+  <a href="{% url 'home' %}" class="btn btn-dark">cancel</a>
+</form>
+{% endblock %}

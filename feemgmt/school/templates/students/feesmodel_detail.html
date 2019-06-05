@@ -1,0 +1,15 @@
+{% extends 'demo.html' %}
+{% block body_block %}
+
+<h1> The fee has been paid by "{{ FeesModel.Name }}" of student having id "{{ FeesModel.Std_id }}" total of Rs "{{ FeesModel.Total_fees }}"
+
+
+</h1>
+    <br><a href="{% url 'feesdata' %}" class="btn btn-primary">Fee data</a>
+{% endblock %}
+<h1>
+
+  The student name "{{ student.name }}" of student id
+  "{{ student.Std_id }}" has been added
+
+</h1>

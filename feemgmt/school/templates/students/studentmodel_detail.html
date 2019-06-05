@@ -1,0 +1,9 @@
+{% extends "demo.html" %}
+{% block body_block %}
+<h1>
+
+  The student name "{{ student.name }}" of student id
+  "{{ student.Std_id }}" has been added
+    <br><a href="{% url 'studentdata' %}" class="btn btn-primary">Student data</a>
+</h1>
+{% endblock %}

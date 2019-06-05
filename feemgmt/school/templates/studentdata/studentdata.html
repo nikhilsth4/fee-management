@@ -1,0 +1,40 @@
+
+{% extends 'demo.html' %}
+{% block body_block %}
+
+<h1>Student Data</h1>
+{% if allstudent %}
+<table class="table table-hover">
+  <thead>
+    <th scope="col">Std_id</th>
+    <th scope="col">Name</th>
+    <th scope="col">Class</th>
+    <th scope="col">Mobile_no</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Academic_year</th>
+    <th scope="col">Branch</th>
+    <th scope="col">Update</th>
+    <th scope="col">Delete</th>
+
+
+
+  </thead>
+  {% for student in allstudent %}
+  <tr>
+    <td scope="row" >{{ student.Std_id }}</td>
+    <td scope="row" class="name" style="text-transform: capitalize;">{{ student.name }}</td>
+    <td scope="row">{{ student.Class }}</td>
+    <td scope="row">{{ student.Mobile_no }}</td>
+    <td scope="row">{{ student.Gender }}</td>
+    <td scope="row">{{ student.Academic_year }}</td>
+    <td scope="row">{{ student.Branch }}</td>
+    <td scope="row"><a href="{% url 'student-update' pk=student.pk %}">update</a></td>
+    <td scope="row"><a href="{% url 'student-delete' student.pk %}">delete</a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>nothing available</p>
+{% endif %}
+<a href="{% url "student-create" %}">create</a>
+{% endblock %}

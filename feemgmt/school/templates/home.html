@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "demo.html" %}
+{% load staticfiles %}
+
+{% block body_block %}
+
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+
+    <body>
+    <div class="container">
+        <div class="left">
+            <h3>Books</h3>
+            <ul>
+                <li>technical writing</li>
+                <li>toc</li>
+                <li>dbms</li>
+                <li>congnitive science</li>
+            </ul>
+            <!--       <br>-->
+            <h3>Different college</h3>
+            <ul>
+                <li>khwopa</li>
+                <li>kathford</li>
+                <li>dfnsfns</li>
+                <li>jdbsfjs</li>
+            </ul>
+        </div>
+
+        <div class="right">
+            <h1>A Basketball tournament</h1>
+            <img src={% static "images/basketball.jpg" %} alt="" width="661px">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, modi, eveniet? Sint illo, illum
+                iure quos sequi tempora veniam possimus corrupti reiciendis, ea rerum, beatae. Facere atque repudiandae
+                consectetur, quaerat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fuga ipsum eligendi recusandae. Voluptate
+                veritatis amet modi, architecto iste, deserunt laudantium esse, velit harum sunt soluta optio. Officiis
+                voluptatum, corporis.</p>
+            <h1>Wins Football Tournament</h1>
+            <img src={% static "images/messi.jpg" %} width="661px" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, modi, eveniet? Sint illo, illum
+                iure quos sequi tempora veniam possimus corrupti reiciendis, ea rerum, beatae. Facere atque repudiandae
+                consectetur, quaerat.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fuga ipsum eligendi recusandae. Voluptate
+                veritatis amet modi, architecto iste, deserunt laudantium esse, velit harum sunt soluta optio. Officiis
+                voluptatum, corporis.</p>
+        </div>
+    </div>
+    <div class="footer-color">
+        <footer>
+            <div class="foot">
+                <ul>
+                    <li>Himalaya@2018</li>
+                    <br>
+                    <li style="text-transform: none">himalaya@edu.np</li>
+                    <br>
+                    <li>55165267,988676675</li>
+                    <br>
+                    <li>Kathmandu,Nepal</li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+{% endblock %}
+</body>
+
+</html>
